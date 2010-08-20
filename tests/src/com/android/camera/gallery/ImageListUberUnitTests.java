@@ -1,6 +1,6 @@
-package com.android.camera.gallery;
+package viddyup.camera.gallery;
 
-import com.android.camera.ImageManager;
+import viddyup.camera.ImageManager;
 
 import android.test.AndroidTestCase;
 

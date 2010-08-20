@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.camera;
+package viddyup.camera;
 
 import android.test.suitebuilder.UnitTestSuiteBuilder;
 
@@ -29,7 +29,7 @@ public class UnitTests extends TestSuite {
     public static Test suite() {
         return new UnitTestSuiteBuilder(UnitTests.class)
                 .includeAllPackagesUnderHere()
-                .excludePackages("com.android.camera.stress")
+                .excludePackages("viddyup.camera.stress")
                 .named("Camera Unit Tests")
                 .build();
     }

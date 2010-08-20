@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.camera"
-        android:sharedUserId="android.media">
+        package="viddyup.camera">
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
@@ -11,6 +10,8 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-sdk android:minSdkVersion="8" />
 
     <application android:icon="@drawable/ic_launcher_camera"
             android:label="@string/camera_label"

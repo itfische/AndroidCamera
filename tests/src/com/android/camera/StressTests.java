@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.android.camera;
+package viddyup.camera;
 
-import com.android.camera.stress.ImageCapture;
-import com.android.camera.stress.SwitchPreview;
-import com.android.camera.stress.CameraLatency;
-import com.android.camera.stress.CameraStartUp;
+import viddyup.camera.stress.ImageCapture;
+import viddyup.camera.stress.SwitchPreview;
+import viddyup.camera.stress.CameraLatency;
+import viddyup.camera.stress.CameraStartUp;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -31,7 +31,7 @@ import junit.framework.TestSuite;
  * Running all tests:
  *
  * adb shell am instrument -w \
- *    com.android.camera.tests/com.android.camera.CameraStressTestRunner
+ *    viddyup.camera.tests/viddyup.camera.CameraStressTestRunner
  */
 
 public class StressTests extends TestSuite {

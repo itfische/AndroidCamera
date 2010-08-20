@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.camera.stress;
+package viddyup.camera.stress;
 
-import com.android.camera.Camera;
+import viddyup.camera.Camera;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -50,7 +50,7 @@ public class CameraLatency extends ActivityInstrumentationTestCase2 <Camera> {
     private long mAvgJpegCallbackToFirstFrameTime;
 
     public CameraLatency() {
-        super("com.android.camera", Camera.class);
+        super("viddyup.camera", Camera.class);
     }
 
     @Override

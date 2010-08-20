@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.camera;
+package viddyup.camera;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -30,7 +30,7 @@ public class CameraLaunchPerformance extends LaunchPerformanceBase {
     @Override
     public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
-        mIntent.setClassName(getTargetContext(), "com.android.camera.Camera");
+        mIntent.setClassName(getTargetContext(), "viddyup.camera.Camera");
         start();
     }
 

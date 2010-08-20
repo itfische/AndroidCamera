@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.camera;
+package viddyup.camera;
 
-import com.android.camera.gallery.IImage;
-import com.android.camera.gallery.IImageList;
+import viddyup.camera.gallery.IImage;
+import viddyup.camera.gallery.IImageList;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -30,10 +30,10 @@
     <string name="all_videos">All videos</string>
 
     <!-- label for the icon meaning 'show me all the images that were taken with the camera' -->
-    <string name="camera_label">Camera</string>
+    <string name="camera_label">PhotoUp</string>
 
     <!-- label for the 'video recording application shown in the top level 'all applications' -->
-    <string name="video_camera_label">Camcorder</string>
+    <string name="video_camera_label">Viddyup</string>
 
     <!-- label for the 'pictures application shown in the top level 'all applications' -->
     <string name="gallery_picker_label">Gallery</string>

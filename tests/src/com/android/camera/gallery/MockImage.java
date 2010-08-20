@@ -1,4 +1,4 @@
-package com.android.camera.gallery;
+package viddyup.camera.gallery;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

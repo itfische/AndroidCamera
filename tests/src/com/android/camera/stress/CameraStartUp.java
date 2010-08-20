@@ -1,4 +1,4 @@
-package com.android.camera.stress;
+package viddyup.camera.stress;
 
 import android.app.Instrumentation;
 import android.content.Intent;
@@ -19,9 +19,9 @@ public class CameraStartUp extends InstrumentationTestCase {
 
     private String TAG = "CameraStartUp";
     private static final String CAMERA_TEST_OUTPUT_FILE = "/sdcard/mediaStressOut.txt";
-    private static final String CAMERA_PACKAGE_NAME = "com.android.camera";
-    private static final String CAMERA_ACTIVITY_NAME = "com.android.camera.Camera";
-    private static final String VIDEORECORDER_ACTIVITY_NAME = "com.android.camera.VideoCamera";
+    private static final String CAMERA_PACKAGE_NAME = "viddyup.camera";
+    private static final String CAMERA_ACTIVITY_NAME = "viddyup.camera.Camera";
+    private static final String VIDEORECORDER_ACTIVITY_NAME = "viddyup.camera.VideoCamera";
     private static int WAIT_TIME_FOR_PREVIEW = 1500; //1.5 second
 
     private long launchCamera() {

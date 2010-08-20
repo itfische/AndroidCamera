@@ -1,4 +1,4 @@
-package com.android.camera.gallery;
+package viddyup.camera.gallery;
 
 import android.test.AndroidTestCase;
 import android.util.Log;

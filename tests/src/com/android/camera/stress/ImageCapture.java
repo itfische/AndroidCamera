@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.camera.stress;
+package viddyup.camera.stress;
 
-import com.android.camera.Camera;
+import viddyup.camera.Camera;
 
 import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
@@ -37,8 +37,8 @@ import android.content.Intent;
  * Running the test suite:
  *
  * adb shell am instrument \
- *    -e class com.android.camera.stress.ImageCapture \
- *    -w com.android.camera.tests/com.android.camera.CameraStressTestRunner
+ *    -e class viddyup.camera.stress.ImageCapture \
+ *    -w viddyup.camera.tests/viddyup.camera.CameraStressTestRunner
  *
  */
 
@@ -66,7 +66,7 @@ public class ImageCapture extends ActivityInstrumentationTestCase2 <Camera> {
     private FileWriter mfstream;
 
     public ImageCapture() {
-        super("com.android.camera", Camera.class);
+        super("viddyup.camera", Camera.class);
     }
 
     @Override
@@ -250,8 +250,8 @@ public class ImageCapture extends ActivityInstrumentationTestCase2 <Camera> {
             mOut.write("loop: ");
             // Switch to the video mode
             Intent intent = new Intent();
-            intent.setClassName("com.android.camera",
-                    "com.android.camera.VideoCamera");
+            intent.setClassName("viddyup.camera",
+                    "viddyup.camera.VideoCamera");
             getActivity().startActivity(intent);
             for (int i = 0; i < TOTAL_NUMBER_OF_VIDEOCAPTURE; i++) {
                 Thread.sleep(WAIT_FOR_PREVIEW);

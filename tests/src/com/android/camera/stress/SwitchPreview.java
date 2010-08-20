@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.camera.stress;
+package viddyup.camera.stress;
 
-import com.android.camera.VideoCamera;
+import viddyup.camera.VideoCamera;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
@@ -32,8 +32,8 @@ import android.util.Log;
  * Running the test suite:
  *
  * adb shell am instrument \
- *    -e class com.android.camera.stress.SwitchPreview \
- *    -w com.android.camera.tests/com.android.camera.CameraStressTestRunner
+ *    -e class viddyup.camera.stress.SwitchPreview \
+ *    -w viddyup.camera.tests/viddyup.camera.CameraStressTestRunner
  *
  */
 public class SwitchPreview extends ActivityInstrumentationTestCase2 <VideoCamera>{
@@ -46,7 +46,7 @@ public class SwitchPreview extends ActivityInstrumentationTestCase2 <VideoCamera
     private FileWriter mfstream;
 
     public SwitchPreview() {
-        super("com.android.camera", VideoCamera.class);
+        super("viddyup.camera", VideoCamera.class);
     }
 
     @Override
@@ -93,12 +93,12 @@ public class SwitchPreview extends ActivityInstrumentationTestCase2 <VideoCamera
             for (int i=0; i< TOTAL_NUMBER_OF_SWITCHING; i++) {
                 Thread.sleep(WAIT_FOR_PREVIEW);
                 Intent intent = new Intent();
-                intent.setClassName("com.android.camera",
-                        "com.android.camera.VideoCamera");
+                intent.setClassName("viddyup.camera",
+                        "viddyup.camera.VideoCamera");
                 getActivity().startActivity(intent);
                 Thread.sleep(WAIT_FOR_PREVIEW);
-                intent.setClassName("com.android.camera",
-                "com.android.camera.Camera");
+                intent.setClassName("viddyup.camera",
+                "viddyup.camera.Camera");
                 getActivity().startActivity(intent);
                 mOut.write(" ," + i);
                 mOut.flush();
