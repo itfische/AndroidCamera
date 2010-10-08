@@ -13,8 +13,9 @@
 
     <uses-sdk android:minSdkVersion="8" />
 
-    <application android:icon="@drawable/ic_launcher_camera"
-            android:label="@string/camera_label"
+    <application android:icon="@drawable/ic_launcher_video_camera"
+            android:label="@string/video_camera_label"
+            android:debuggable="true"
             android:taskAffinity="">
         <!--service android:name="UploadService" android:process="android.process.media" /-->
         <receiver android:name="CameraButtonIntentReceiver">
@@ -28,11 +29,11 @@
                 android:screenOrientation="landscape"
                 android:clearTaskOnLaunch="true"
                 android:taskAffinity="android.task.camera">
-            <intent-filter>
+            <!--intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter-->
             <intent-filter>
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -51,6 +52,11 @@
                 android:clearTaskOnLaunch="true"
                 android:taskAffinity="android.task.camcorder">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAMERA" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -59,60 +65,60 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="GalleryPicker" android:label="@string/gallery_picker_label"
+        <!--activity android:name="GalleryPicker" android:label="@string/gallery_picker_label"
                 android:configChanges="orientation|keyboardHidden"
                 android:icon="@drawable/ic_launcher_gallery"
                 android:clearTaskOnLaunch="true"
                 android:taskAffinity="android.task.pictures">
-        </activity>
-        <activity android:name="ImageGallery" android:label="@string/gallery_label"
+        </activity-->
+        <!--activity android:name="ImageGallery" android:label="@string/gallery_label"
                 android:configChanges="orientation|keyboardHidden"
                 android:icon="@drawable/ic_launcher_gallery">
-        </activity>
-        <activity android:name="CropImage"
+        </activity-->
+        <!--activity android:name="CropImage"
                 android:process=":CropImage"
                 android:configChanges="orientation|keyboardHidden"
                 android:label="@string/crop_label">
-        </activity>
-        <activity android:name="ReviewImage"
+        </activity-->
+        <!--activity android:name="ReviewImage"
                 android:label="@string/view_label"
                 android:theme="@style/CustomTheme"
                 android:screenOrientation="behind"
                 android:configChanges="orientation|keyboardHidden"
                 android:exported="true">
-        </activity>
-        <activity android:name="ViewImage"
+        </activity-->
+        <!--activity android:name="ViewImage"
                 android:label="@string/view_label"
                 android:screenOrientation="behind"
                 android:configChanges="orientation|keyboardHidden">
-        </activity>
-        <activity android:name="MovieView"
+        </activity-->
+        <!--activity android:name="MovieView"
                 android:label="@string/movieviewlabel"
                 android:screenOrientation="landscape"
                 android:configChanges="orientation|keyboardHidden"
                 android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        </activity>
-        <activity android:name=".DeleteImage"
+        </activity-->
+        <!--activity android:name=".DeleteImage"
                 android:label="@string/delete_images_message"
                 android:theme="@style/Theme.DeleteImageDialog">
-        </activity>
+        </activity-->
 
-        <activity android:name="GallerySettings" android:label="@string/preferences_label">
-        </activity>
+        <!--activity android:name="GallerySettings" android:label="@string/preferences_label">
+        </activity-->
 
-        <activity android:name=".Wallpaper"
+        <!--activity android:name=".Wallpaper"
                 android:label="@string/camera_setas_wallpaper"
                 android:icon="@drawable/ic_launcher_gallery">
-        </activity>
+        </activity-->
 
-        <activity android:name=".PickWallpaper"
+        <!--activity android:name=".PickWallpaper"
                 android:label="@string/camera_pick_wallpaper"
                 android:icon="@drawable/ic_launcher_gallery">
-        </activity>
+        </activity-->
 
         <!-- We configure a widget by asking to pick a photo, then crop it, and store the config internally -->
-        <activity android:name="PhotoAppWidgetConfigure">
-        </activity>
+        <!--activity android:name="PhotoAppWidgetConfigure">
+        </activity-->
 
         <!-- We also allow direct binding where the caller provides a bitmap and
              appWidgetId to bind.  We require the permission because this changes our

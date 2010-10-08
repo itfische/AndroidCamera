@@ -150,7 +150,7 @@ public class VideoCamera extends Activity implements View.OnClickListener,
 
     private ShutterButton mShutterButton;
     private TextView mRecordingTimeView;
-    private View mGripper;
+//    private View mGripper;
     private Switcher mSwitcher;
     private boolean mRecordingTimeCountsDown = false;
 
@@ -309,8 +309,8 @@ public class VideoCamera extends Activity implements View.OnClickListener,
         mShutterButton.setImageResource(R.drawable.btn_ic_video_record);
         mShutterButton.setOnShutterButtonListener(this);
         mShutterButton.requestFocus();
-        mGripper = findViewById(R.id.btn_gripper);
-        mGripper.setOnTouchListener(new GripperTouchListener());
+//        mGripper = findViewById(R.id.btn_gripper);
+//        mGripper.setOnTouchListener(new GripperTouchListener());
 
         mWhitebalanceIndicator =
                 (IconIndicator) findViewById(R.id.whitebalance_icon);
@@ -1086,22 +1086,22 @@ public class VideoCamera extends Activity implements View.OnClickListener,
         return screen;
     }
 
-    private class GripperTouchListener implements View.OnTouchListener {
-        public boolean onTouch(View view, MotionEvent event) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    return true;
-                case MotionEvent.ACTION_UP:
-                    showOnScreenSettings();
-                    return true;
-            }
-            return false;
-        }
-    }
+//    private class GripperTouchListener implements View.OnTouchListener {
+//        public boolean onTouch(View view, MotionEvent event) {
+//            switch (event.getAction()) {
+//                case MotionEvent.ACTION_DOWN:
+//                    return true;
+//                case MotionEvent.ACTION_UP:
+//                    showOnScreenSettings();
+//                    return true;
+//            }
+//            return false;
+//        }
+//    }
 
     public void onVisibilityChanged(boolean visible) {
         // At this point, we are not recording.
-        mGripper.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+//        mGripper.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
         if (visible) {
             releaseMediaRecorder();
             mPreferences.registerOnSharedPreferenceChangeListener(this);
@@ -1178,7 +1178,7 @@ public class VideoCamera extends Activity implements View.OnClickListener,
             mRecordingTimeView.setVisibility(View.VISIBLE);
             updateRecordingTime();
             keepScreenOn();
-            mGripper.setVisibility(View.INVISIBLE);
+//            mGripper.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -1284,7 +1284,7 @@ public class VideoCamera extends Activity implements View.OnClickListener,
             updateRecordingIndicator(true);
             mRecordingTimeView.setVisibility(View.GONE);
             keepScreenOnAwhile();
-            mGripper.setVisibility(View.VISIBLE);
+//            mGripper.setVisibility(View.VISIBLE);
         }
         if (needToRegisterRecording && mStorageStatus == STORAGE_STATUS_OK) {
             registerVideo();
